@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('computers', function (Blueprint $table) {
             $table->id();
+            $table->integer('number');
+            $table->string('brand');
+            
             $table->timestamps();
         });
     }

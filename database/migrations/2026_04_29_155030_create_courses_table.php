@@ -13,6 +13,22 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
+            $table->integer('course number');
+            $table->date('day');
+            //llaves franeas
+            $table->unsignedBigInteger('area_id');
+            $table->unsignedBigInteger('training_center_id');
+
+            $table->foreign('area_id')
+                ->references('id')
+                ->on('areas')
+                ->onDelete('cascade');
+
+            $table->foreign('training_center_id')
+                ->references('id')
+                ->on('training_centers')
+                ->onDelete('cascade');
+                
             $table->timestamps();
         });
     }

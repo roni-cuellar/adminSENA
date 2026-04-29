@@ -13,6 +13,23 @@ return new class extends Migration
     {
         Schema::create('apprentices', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->integer('cell number');
+            // llaves foráneas
+            $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('computer_id')->nullable();
+
+            $table->foreign('course_id')
+                ->references('id')
+                ->on('courses')
+                ->onDelete('cascade');
+
+            $table->foreign('computer_id')
+                ->references('id')
+                ->on('computers')
+                ->onDelete('set null');
+                
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\area;
 
-class AreasController extends Controller
+class AreaController extends Controller
 {
     public function create()
     {

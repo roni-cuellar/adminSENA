@@ -11,7 +11,7 @@
     <div>
         <p><strong>ID:</strong> {{ $teacher->id }}</p>
         <p><strong>Nombre:</strong> {{ $teacher->name }}</p>
-        <p><strong>Ubicación:</strong> {{ $teacher->location }}</p>
+        <p><strong>Correo:</strong> {{ $teacher->email}}</p>
         <p><strong>Área ID:</strong> {{ $teacher->area_id }}</p>
         <p><strong>Centro de formación ID:</strong> {{ $teacher->training_center_id }}</p>
         <p><strong>Creado:</strong> {{ $teacher->created_at }}</p>

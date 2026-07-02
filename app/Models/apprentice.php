@@ -9,6 +9,8 @@ class apprentice extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'email', 'cell_number', 'course_id', 'computer_id'];
+
     //Relacion Uno a Muchos (Inversa) con Course
     public function course(){
         return $this->belongsTo('App\Models\Course');

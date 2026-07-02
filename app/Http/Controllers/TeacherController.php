@@ -11,7 +11,7 @@ class TeacherController extends Controller
 {
     public function create()
     {
-        return view('Teachers.create', [
+        return view('Teacher.create', [
             'areas' => area::all(),
             'training_center' => training_center::all(),
         ]);
@@ -26,6 +26,6 @@ class TeacherController extends Controller
 
     public function show(teacher $teacher)
     {
-        return view('Teachers.show', compact('teacher'));
+        return view('Teacher.show', compact('teacher'));
     }
 }

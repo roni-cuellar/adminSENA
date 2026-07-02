@@ -9,6 +9,8 @@ class computer extends Model
 {
     use HasFactory;
 
+    
+
     public function apprentices(){
         return $this->hasOne('App\Models\Apprentice');
     }

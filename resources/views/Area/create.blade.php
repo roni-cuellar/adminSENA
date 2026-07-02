@@ -14,7 +14,8 @@
             <input type="text" name="name">
         </label>
         <br>
+        <br>
 
-        <button type="submit">Llenar el siguiente formulario:</button>
+        <button type="submit">Llenar el siguiente formulario</button>
     </form>
 @endsection

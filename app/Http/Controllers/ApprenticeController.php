@@ -7,11 +7,11 @@ use App\Models\computer;
 use App\Models\course;
 use Illuminate\Http\Request;
 
-class ApprenticesController extends Controller
+class ApprenticeController extends Controller
 {
     public function create()
     {
-        return view('Apprentices.create', [
+        return view('Apprentice.create', [
             'courses' => course::all(),
             'computers' => computer::all(),
         ]);

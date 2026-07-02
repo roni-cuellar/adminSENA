@@ -15,5 +15,10 @@
     </main>
 
     @include('includes.footer')
+
+    @include('includes.dependencias')
+    @include('includes.dependenciasbody')
+
+
 </body>
 </html>

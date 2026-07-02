@@ -11,9 +11,9 @@ class CourseController extends Controller
 {
     public function create()
     {
-        return view('Courses.create', [
+        return view('Course.create', [
             'areas' => area::all(),
-            'training_center' => training_center::all(),
+            'training_centers' => training_center::all(),
         ]);
     }
 

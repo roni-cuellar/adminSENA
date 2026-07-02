@@ -25,7 +25,7 @@
          <label>
             Número de teléfono:
             <br>
-            <input type="text" name="number">
+            <input type="text" name="cell_number">
         </label>
         <br>
 

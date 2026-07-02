@@ -16,15 +16,15 @@
         <br>
 
         <label>
-            Ubicación:
+            Correo:
             <br>
-            <input type="text" name="location">
+            <input type="text" name="email">
         </label>
         <br>
 
         <label for="area_id">Área:</label>
         
-         <select name="area_id" id="area_id" class="form-control">
+        <select name="area_id" id="area_id" class="form-control">
                 <option value="">Seleccione un área</option>
                 
                 @foreach($areas as $area)
@@ -37,12 +37,12 @@
             </select>
         <br>
 
-         <label for="training_center_id">Centro de Formación:</label>
+        <label for="training_center_id">Centro de Formación:</label>
         
-         <select name="training_center_id" id="training_center_id" class="form-control">
+        <select name="training_center_id" id="training_center_id" class="form-control">
                 <option value="">Seleccione un centro de formación</option>
                 
-                @foreach($training_centers as $training_center)
+                @foreach($training_center as $training_center)
 
                 <option value="{{ $training_center->id }}">
                     {{ $training_center->name }}

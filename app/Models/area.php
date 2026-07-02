@@ -9,6 +9,9 @@ class area extends Model
 {
     use HasFactory;
 
+    // app/Models/area.php
+    protected $fillable = ['name'];
+
     //Relacion Uno a Muchos con Teacher
     public function teachers(){
         return $this->hasMany('App\Models\Teacher');

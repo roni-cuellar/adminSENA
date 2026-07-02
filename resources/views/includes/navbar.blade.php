@@ -1,11 +1,34 @@
-<nav style="background:#2563eb; padding:1rem 0;">
-  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem;">
-    <a href="{{ url('/') }}" style="color:white; font-weight:700; text-decoration:none; margin-right:1.5rem;">Admin-Sena</a>
-    <a href="{{ route('computer.create') }}" style="color:white; text-decoration:none;">Computadores</a>
-    <a href="{{ route('training_center.create') }}" style="color:white; text-decoration:none;">Centro</a>
-    <a href="{{ route('area.create') }}" style="color:white; text-decoration:none;">Áreas</a>
-    <a href="{{ route('course.create') }}" style="color:white; text-decoration:none;">Cursos</a>
-    <a href="{{ route('apprentice.create') }}" style="color:white; text-decoration:none;">Aprendices</a>
-    <a href="{{ route('teacher.create') }}" style="color:white; text-decoration:none;">Instructores</a>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin-Sena</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('computer.create') }}" >Computadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('training_center.create') }}">Centro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('area.create') }}">Áreas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('course.create') }}" >Cursos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('apprentice.create') }}">Aprendices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('teacher.create') }}">Instructores</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        
+      </span>
+    </div>
   </div>
 </nav>

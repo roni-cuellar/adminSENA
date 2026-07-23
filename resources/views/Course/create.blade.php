@@ -23,14 +23,14 @@
         <label>
             Número de curso:
             <br>
-            <input type="text" name="course_number" value="{{ old('course_number') }}">
+            <input type="number" name="course_number" value="{{ old('course_number') }}">
         </label>
         <br>
 
         <label>
             Día:
             <br>
-            <input type="text" name="day" value="{{ old('day') }}">
+            <input type="date" name="day" value="{{ old('day') }}">
         </label>
         <br>
 
@@ -63,6 +63,8 @@
                 @endforeach
             </select>
 
-        <button type="submit">Llenar el siguiente formulario:</button>
+            <br>
+
+        <button type="submit">Llenar el siguiente formulario</button>
     </form>
 @endsection

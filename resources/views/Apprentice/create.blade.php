@@ -11,21 +11,21 @@
         <label>
             Nombre:
             <br>
-            <input type="text" name="name">
+            <input type="text" name="name" value="{{ old('name') }}">
         </label>
         <br>
 
         <label>
             Correo:
             <br>
-            <input type="email" name="email">
+            <input type="email" name="email" value="{{ old('email') }}">
         </label>
         <br>
 
          <label>
             Número de teléfono:
             <br>
-            <input type="text" name="cell_number">
+            <input type="number" name="cell_number" value="{{ old('cell_number') }}">
         </label>
         <br>
 
@@ -36,7 +36,7 @@
                 
                 @foreach($courses as $course)
 
-                <option value="{{ $course->id }}">
+                <option value="{{ $course->id }}" {{ old('course_id') == $course->id ? 'selected' : '' }}>
                     {{ $course->course_number }}
                 </option>
 
@@ -51,14 +51,15 @@
                 
                 @foreach($computers as $computer)
 
-                <option value="{{ $computer->id }}">
+                <option value="{{ $computer->id }}" {{ old('computer_id') == $computer->id ? 'selected' : '' }}>
                     {{ $computer->number }}
                 </option>
 
                 @endforeach
             </select>
         <br>
-
-        <button type="submit">Llenar el siguiente formulario:</button>
+        <br>
+        
+        <button type="submit">Llenar el siguiente formulario</button>
     </form>
 @endsection

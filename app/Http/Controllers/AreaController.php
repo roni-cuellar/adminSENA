@@ -15,13 +15,17 @@ class AreaController extends Controller
 
     public function store(Request $request)
     {
-        $area = area::create($request->all());
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
 
-        return response()->json($area);
+        $area = area::create($validated);
+
+        return redirect()->route('area.show', $area);
     }
 
     public function show(area $area)
     {
-        return view('area.show', compact('area'));
+        return view('Area.show', compact('area'));
     }
 }

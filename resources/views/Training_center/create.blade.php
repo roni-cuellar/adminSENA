@@ -11,17 +11,18 @@
         <label>
             Nombre:
             <br>
-            <input type="text" name="name">
+            <input type="text" name="name" value="{{ old('name') }}">
         </label>
         <br>
 
         <label>
             Ubicación:
             <br>
-            <input type="text" name="location">
+            <input type="text" name="location" value="{{ old('location') }}">
         </label>
         <br>
+        <br>
 
-        <button type="submit">Llenar el siguiente formulario:</button>
+        <button type="submit">Llenar el siguiente formulario</button>
     </form>
 @endsection

@@ -9,10 +9,10 @@ class computer extends Model
 {
     use HasFactory;
 
-    
+    protected $fillable = ['number', 'brand'];
 
     public function apprentices(){
-        return $this->hasOne('App\Models\Apprentice');
+        return $this->hasOne(apprentice::class);
     }
 
 }

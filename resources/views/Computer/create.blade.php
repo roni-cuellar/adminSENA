@@ -11,17 +11,18 @@
         <label>
             Número:
             <br>
-            <input type="number" name="number">
+            <input type="number" name="number" value="{{ old('number') }}">
         </label>
         <br>
 
         <label>
             Marca:
             <br>
-            <input type="text" name="brand">
+            <input type="text" name="brand" value="{{ old('brand') }}">
         </label>
         <br>
+        <br>
 
-        <button type="submit">Llenar el siguiente formulario:</button>
+        <button type="submit">Llenar el siguiente formulario</button>
     </form>
 @endsection

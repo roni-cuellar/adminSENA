@@ -13,15 +13,22 @@ class TeacherController extends Controller
     {
         return view('Teacher.create', [
             'areas' => area::all(),
-            'training_center' => training_center::all(),
+            'training_centers' => training_center::all(),
         ]);
     }
 
     public function store(Request $request)
     {
-        $teacher = teacher::create($request->all());
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'area_id' => 'required|exists:areas,id',
+            'training_center_id' => 'required|exists:training_centers,id',
+        ]);
 
-        return response()->json($teacher);
+        $teacher = teacher::create($validated);
+
+        return redirect()->route('teacher.show', $teacher);
     }
 
     public function show(teacher $teacher)

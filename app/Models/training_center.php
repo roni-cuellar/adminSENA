@@ -9,14 +9,16 @@ class training_center extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'location'];
+
     //Relacion Uno a Muchos con Teacher
     public function teachers(){
-        return $this->hasMany('App\Models\Teacher');
+        return $this->hasMany(teacher::class);
     }
 
     //Relacion Uno a Muchos con Course
     public function courses(){
-        return $this->hasMany('App\Models\Course');
+        return $this->hasMany(course::class);
     }
     
 }

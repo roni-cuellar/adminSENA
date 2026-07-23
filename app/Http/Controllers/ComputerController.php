@@ -15,13 +15,18 @@ class ComputerController extends Controller
 
     public function store(Request $request)
     {
-        $computer = computer::create($request->all());
+        $validated = $request->validate([
+            'number' => 'required|integer',
+            'brand' => 'required|string|max:255',
+        ]);
 
-        return response()->json($computer);
+        $computer = computer::create($validated);
+
+        return redirect()->route('computer.show', $computer);
     }
 
     public function show(computer $computer)
     {
-        return view('computer.show', compact('computer'));
+        return view('Computer.show', compact('computer'));
     }
 }

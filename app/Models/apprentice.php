@@ -13,12 +13,12 @@ class apprentice extends Model
 
     //Relacion Uno a Muchos (Inversa) con Course
     public function course(){
-        return $this->belongsTo('App\Models\Course');
+        return $this->belongsTo(course::class);
     }
 
     //Relacion Uno a Muchos (Inversa) con Computer
     public function computer(){
-        return $this->belongsTo('App\Models\Computer');
+        return $this->belongsTo(computer::class);
     }
     
 }

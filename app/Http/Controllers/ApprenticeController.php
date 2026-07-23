@@ -19,13 +19,21 @@ class ApprenticeController extends Controller
 
     public function store(Request $request)
     {
-        $apprentice = apprentice::create($request->all());
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'cell_number' => 'required|integer',
+            'course_id' => 'required|exists:courses,id',
+            'computer_id' => 'nullable|exists:computers,id',
+        ]);
 
-        return response()->json($apprentice);
+        $apprentice = apprentice::create($validated);
+
+        return redirect()->route('apprentice.show', $apprentice);
     }
 
     public function show(apprentice $apprentice)
     {
-        return view('apprentice.show', compact('apprentice'));
+        return view('Apprentice.show', compact('apprentice'));
     }
 }

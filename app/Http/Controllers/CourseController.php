@@ -20,10 +20,10 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'course_number' => 'required|string|max:255',
-            'day' => 'required|string|max:255',
-            'area_id' => 'nullable|exists:areas,id',
-            'training_center_id' => 'nullable|exists:training_centers,id',
+            'course_number' => 'required|integer',
+            'day' => 'required|date',
+            'area_id' => 'required|exists:areas,id',
+            'training_center_id' => 'required|exists:training_centers,id',
         ]);
 
         $course = course::create($validated);
@@ -33,6 +33,6 @@ class CourseController extends Controller
 
     public function show(course $course)
     {
-        return view('course.show', compact('course'));
+        return view('Course.show', compact('course'));
     }
 }

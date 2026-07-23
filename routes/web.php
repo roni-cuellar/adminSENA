@@ -9,6 +9,8 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ApprenticeController;
 use App\Http\Controllers\TeacherController;
 
+Route::get('/', [ComputerController::class, 'create']);
+
 // Estas son las rutas para Centros de Formacion
 Route::get('training-center/create', [TrainingCenterController::class, 'create'])->name('training_center.create');
 Route::post('training-center/store', [TrainingCenterController::class, 'store'])->name('training_center.store');

@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Registrado</title>
-    <link rel="stylesheet" href="{{ asset('css/form-style.css') }}">
-</head>
-<body>
-    <h1>Centro de Formación Registrado</h1>
-    <div>
+    @extends('layouts.app')
+    @section('content')
+<a href="{{ route('training_center.index') }}" class="btn btn-success">atras</a>
+    <h1>Centro de Formacion Registrado</h1>
+
+    <div class ="container">
         <p><strong>ID:</strong> {{ $training_center->id }}</p>
         <p><strong>Nombre:</strong> {{ $training_center->name }}</p>
-        <p><strong>Ubicación:</strong> {{ $training_center->location }}</p>
+        <p><strong>Ubicacion:</strong> {{ $training_center->location }}</p>
         <p><strong>Creado:</strong> {{ $training_center->created_at }}</p>
     </div>
-    <a href="{{ route('training_center.create') }}">Volver al formulario</a>
+    <a href="{{ route('training_center.create') }}" class="btn btn-success">Volver al formulario</a>
 </body>
 </html>
+
+@endsection

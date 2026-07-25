@@ -1,0 +1,19 @@
+.navbar-sena{
+    background-color: #39A900;
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+.navbar-sena .navbar-brand{
+    color: white !important;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.navbar-sena .nav-link{
+    color: white !important;
+    transition: .3s;
+}
+
+.navbar-sena .nav-link:hover{
+    color: #FFD54F !important;
+}

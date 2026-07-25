@@ -36,7 +36,7 @@
 
         <label for="area_id">Área:</label>
         
-         <select name="area_id" id="area_id" class="form-control">
+        <select name="area_id" id="area_id" class="form-control">
                 <option value="">Seleccione un área</option>
                 
                 @foreach($areas as $area)
@@ -49,7 +49,7 @@
             </select>
         <br>
 
-         <label for="training_center_id">Centro de Formación:</label>
+        <label for="training_center_id">Centro de Formación:</label>
         
          <select name="training_center_id" id="training_center_id" class="form-control">
                 <option value="">Seleccione un centro de formación</option>
@@ -66,5 +66,6 @@
             <br>
 
         <button type="submit">Llenar el siguiente formulario</button>
+        
     </form>
 @endsection

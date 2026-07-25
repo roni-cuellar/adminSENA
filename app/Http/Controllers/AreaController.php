@@ -8,6 +8,16 @@ use App\Models\area;
 
 class AreaController extends Controller
 {
+
+
+    public function index(){
+
+    $areas =area::all();
+
+    return view('area.index',compact('areas'));
+
+    }
+
     public function create()
     {
         return view('Area.create'); 
@@ -21,7 +31,7 @@ class AreaController extends Controller
 
         $area = area::create($validated);
 
-        return redirect()->route('area.show', $area);
+        return redirect()->route('area.index', $area);
     }
 
     public function show(area $area)

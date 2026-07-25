@@ -23,6 +23,7 @@
         <br>
         <br>
 
-        <button type="submit">Llenar el siguiente formulario</button>
+        <button type="submit" class="btn btn-success">Llenar el siguiente formulario</button>
+        <a href="{{ route('training_center.index') }}" class="btn btn-success"> Ver centros de formacion </a>
     </form>
 @endsection

@@ -8,6 +8,15 @@ use App\Models\training_center;
 
 class TrainingCenterController extends Controller
 {
+
+    public function index(){
+
+    $training_centers =training_center::all();
+
+    return view('Training_center.index',compact('training_centers'));
+
+    }
+
     public function create()
     {
         return view('Training_center.create'); 
@@ -22,7 +31,7 @@ class TrainingCenterController extends Controller
 
         $training_center = training_center::create($validated);
 
-        return redirect()->route('training_center.show', $training_center);
+        return redirect()->route('training_center.index', $training_center);
     }
 
     public function show(training_center $training_center)

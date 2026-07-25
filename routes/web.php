@@ -12,16 +12,19 @@ use App\Http\Controllers\TeacherController;
 Route::get('/', [ComputerController::class, 'create']);
 
 // Estas son las rutas para Centros de Formacion
+Route::get('training-center/index',[TrainingCenterController::class, 'index'])->name('training_center.index');
 Route::get('training-center/create', [TrainingCenterController::class, 'create'])->name('training_center.create');
 Route::post('training-center/store', [TrainingCenterController::class, 'store'])->name('training_center.store');
 Route::get('training-center/{training_center}', [TrainingCenterController::class, 'show'])->name('training_center.show');
 
 // las rutas para Computadores 
+Route::get('computer/list',[ComputerController::class,'index'])->name('computer.index');
 Route::get('computer/create', [ComputerController::class, 'create'])->name('computer.create');
 Route::post('computer/store', [ComputerController::class, 'store'])->name('computer.store');
 Route::get('computer/{computer}', [ComputerController::class, 'show'])->name('computer.show');
 
 // las rutas para areas 
+Route::get('area/list',[AreaController::class,'index'])->name('area.index');
 Route::get('area/create', [AreaController::class, 'create'])->name('area.create');
 Route::post('area/store', [AreaController::class, 'store'])->name('area.store');
 Route::get('area/{area}', [AreaController::class, 'show'])->name('area.show');

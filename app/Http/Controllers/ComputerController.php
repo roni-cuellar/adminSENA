@@ -8,10 +8,20 @@ use App\Models\computer;
 
 class ComputerController extends Controller
 {
+    public function index(){
+
+    $computers =computer::all();
+
+    return view('computer.index',compact('computers'));
+
+    }
+
+
     public function create()
     {
         return view('Computer.create'); 
     }
+
 
     public function store(Request $request)
     {
@@ -22,7 +32,7 @@ class ComputerController extends Controller
 
         $computer = computer::create($validated);
 
-        return redirect()->route('computer.show', $computer);
+        return redirect()->route('computer.index', $computer);
     }
 
     public function show(computer $computer)

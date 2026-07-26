@@ -6,6 +6,8 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/form-style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contenedores.css') }}">
+
 </head>
 <body>
 
@@ -15,10 +17,10 @@
         @yield('content')
     </main>
 
-    @include('includes.footer')
-
     @include('includes.dependencias')
     @include('includes.dependenciasbody')
+
+    @include('includes.footer')
 
 
 </body>

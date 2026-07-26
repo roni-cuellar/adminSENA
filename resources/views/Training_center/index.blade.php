@@ -3,9 +3,8 @@
 @section('content')
     <h1>LISTAR PRODUCTOS</h1>
     <div class ="container">
-        <a href="{{ route('training_center.create') }}" class="btn btn-success">
-                    <i class="bi bi-plus-circle"></i> Nuevo Producto</a>
-                    
+        <a href="{{ route('training_center.create') }}" class="btn-link-sena"><i class="bi bi-arrow-right-circle"></i> Nuevo Producto</a>
+
         <table id="idProduct" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
@@ -22,7 +21,10 @@
                         <td>{{ $training_center->id }}</td>
                         <td>{{ $training_center->name }}</td>
                         <td>{{ $training_center->location }}</td>
-                        <td><a href="{{ route('training_center.show', $training_center->id) }}">Mostrar</a></td> 
+                        <td><a href="{{ route('training_center.show', $training_center->id) }} "class="btn-ver"> <i class="bi bi-eye"></i></a>
+                            <a href="{{ route('training_center.show', $training_center->id) }} "class="btn-editar"> <i class="bi bi-pencil"></i></a>
+                            <a href="{{ route('training_center.show', $training_center->id) }} "class="btn-eliminar"> <i class="bi bi-trash"></i></a>
+                        </td> 
                         <br>
                     </tr>
                 @endforeach

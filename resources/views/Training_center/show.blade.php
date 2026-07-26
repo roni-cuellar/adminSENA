@@ -9,7 +9,7 @@
         <p><strong>Ubicacion:</strong> {{ $training_center->location }}</p>
         <p><strong>Creado:</strong> {{ $training_center->created_at }}</p>
     </div>
-    <a href="{{ route('training_center.create') }}" class="btn btn-success">Volver al formulario</a>
+    <a href="{{ route('training_center.create') }}" class="btn-link-sena"><i class="bi bi-arrow-right-circle"></i> Volver al formulario</a>
 </body>
 </html>
 

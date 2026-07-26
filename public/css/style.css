@@ -17,3 +17,118 @@
 .navbar-sena .nav-link:hover{
     color: #FFD54F !important;
 }
+
+
+/* FOOTER*/
+
+.footer-sena{
+    background-color: #39A900;
+    color: white;
+    margin-top: 50px;
+    padding: 15px 0;
+    box-shadow: 0 -3px 10px rgba(0,0,0,.2);
+}
+
+.footer-sena h5{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-sena p{
+    margin-bottom: 5px;
+}
+
+.footer-sena small{
+    font-size: 14px;
+}
+
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
+
+/*boton*/
+.btn-sena{
+    background: linear-gradient(90deg,#39A900,#2E7D32);
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 4px 8px rgba(0,0,0,.2);
+}
+
+.btn-sena:hover{
+    background:linear-gradient(90deg,#2E7D32,#1B5E20);
+    transform:translateY(-2px);
+    color:white;
+}
+
+
+/*link general*/
+.btn-link-sena{
+    display:inline-block;
+    padding:10px 20px;
+    background:white;
+    color:#39A900;
+    border:2px solid #39A900;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-link-sena:hover{
+    background:#39A900;
+    color:white;
+}
+
+/*botones de tablas index*/
+.btn-ver{
+    background:#0d6efd;
+    color:white;
+    padding:5px 8px;
+    border-radius:8px;
+    text-decoration:none;
+    margin: 5px;
+}
+.btn-ver:hover{
+    background:#0146ae;
+}
+
+.btn-editar{
+    background:#ffc107;
+    color: white;
+    padding:5px 8px;
+    border-radius:8px;
+    text-decoration:none;
+    margin:5px;
+}
+.btn-editar:hover{
+    background:#a37c04;
+}
+
+.btn-eliminar{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:5px 8px;
+    border-radius:8px;
+    margin: 5px;
+}
+
+.btn-eliminar:hover{
+    background:#a0232f;
+}

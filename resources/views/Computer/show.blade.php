@@ -10,6 +10,6 @@
         <p><strong>Creado:</strong> {{ $computer->created_at }}</p>
     </div>
     
-    <a href="{{ route('computer.create') }}" class="btn btn-success"> Volver al formulario </a>
+    <a href="{{ route('computer.create') }}" class="btn-link-sena"><i class="bi bi-arrow-right-circle"></i> Volver al formulario </a>
 
 @endsection

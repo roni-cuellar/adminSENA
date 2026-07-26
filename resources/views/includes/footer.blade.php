@@ -1,5 +1,13 @@
-<footer style="background:#0e6800; padding:1rem 0; margin-top:2rem;">
-  <div style="max-width:960px; margin:0 auto; text-align:center; color:#ffffff;">
-    <p style="margin:0; font-size:0.95rem;">Administración Sena - Todos los derechos reservados.</p>
-  </div>
+<footer class="footer-sena mt-5">
+    <div class="container-f text-center py-3">
+        <h5>Admin SENA</h5>
+
+        <p class="mb-1">
+            Sistema de Gestión Académica
+        </p>
+
+        <small>
+            © {{ date('Y') }} Administración Sena - Todos los derechos reservados.
+        </small>
+    </div>
 </footer>

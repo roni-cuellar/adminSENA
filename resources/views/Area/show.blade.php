@@ -9,6 +9,6 @@
         <p><strong>Creado:</strong> {{ $area->created_at }}</p>
     </div>
     
-    <a href="{{ route('area.create') }}" class="btn btn-success"> Volver al formulario </a>
+    <a href="{{ route('area.create') }}" class="btn-link-sena"><i class="bi bi-arrow-right-circle"></i>Volver al formulario </a>
 
 @endsection

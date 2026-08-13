@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->integer('cell_number');
+            $table->string('cell_number',10);
             // llaves foráneas
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('computer_id')->nullable();

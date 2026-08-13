@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="{{ asset('css/form-style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contenedores.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
-<body>
 
+<body>
     @include('includes.navbar')
 
     <main class="container mt-4">
@@ -21,7 +21,5 @@
     @include('includes.dependenciasbody')
 
     @include('includes.footer')
-
-
 </body>
 </html>

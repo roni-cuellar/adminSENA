@@ -38,4 +38,35 @@ class AreaController extends Controller
     {
         return view('Area.show', compact('area'));
     }
+
+        //editar
+
+    public function edit(Area $area)
+    {
+
+        return view(
+            'area.edit',
+            compact('area')
+        );
+    }
+
+    //actualizar
+
+    public function update(Request $request, Area $area)
+    {
+        $area->update($request->all());
+
+        return redirect()->route('area.index');
+    }
+
+//delete
+
+    public function destroy(Area $area)
+    {
+        $area->delete();
+
+        return redirect()->route('area.index');
+    }
 }
+
+

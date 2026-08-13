@@ -18,11 +18,11 @@
 
             <div class="campo">
                 <label>Ubicación:</label>
-                <input type="text" name="location" value="{{ old('location') }}" placeholder="Ej: Calle 3 #2-10">
+                <input type="text" name="location" value="{{ old('location') }}" placeholder="Ej: Calle 3 #2-102">
             </div>
 
             <div class="botones_formularios">
-                <button type="submit" class="btn-sena">Llenar el siguiente formulario</button>
+                <button type="submit" class="btn-sena">Guardar</button>
                 <a href="{{ route('training_center.index') }}" class="btn-link-sena"><i class="bi bi-arrow-right-circle"></i> Ver centros de formacion </a>
             </div>
         </form>

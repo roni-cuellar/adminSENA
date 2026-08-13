@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendiz Registrado</title>
-    <link rel="stylesheet" href="{{ asset('css/form-style.css') }}">
-</head>
-<body>
+
+@extends('layouts.app')
+@section('content')
     <h1>Aprendiz Registrado</h1>
     <div>
         <p><strong>ID:</strong> {{ $apprentice->id }}</p>
@@ -17,6 +11,7 @@
         <p><strong>Computador ID:</strong> {{ $apprentice->computer_id }}</p>
         <p><strong>Creado:</strong> {{ $apprentice->created_at }}</p>
     </div>
-    <a href="{{ route('apprentice.create') }}">Volver al formulario</a>
-</body>
-</html>
+    
+    <a href="{{ route('apprentice.create') }}" class="btn-link-sena"><i class="bi bi-arrow-right-circle"></i>Volver al formulario </a>
+
+@endsection

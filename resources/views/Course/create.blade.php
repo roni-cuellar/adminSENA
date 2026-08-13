@@ -1,9 +1,13 @@
 @extends('layouts.app')
-
 @section('title', 'Cursos')
-
 @section('content')
-    <h1>Cursos</h1>
+
+
+<div class="formulario">
+
+    <div class="header_formulario">
+        <h1>Cursos</h1>
+    </div>
 
     @if ($errors->any())
         <div style="background:#fee2e2; color:#991b1b; padding:1rem; border:1px solid #fca5a5; margin-bottom:1rem;">
@@ -20,22 +24,17 @@
 
         @csrf
 
-        <label>
-            Número de curso:
-            <br>
+        <div class="campo">
+            <label>Número de curso:</label>
             <input type="number" name="course_number" value="{{ old('course_number') }}">
-        </label>
-        <br>
+        </div>
 
-        <label>
-            Día:
-            <br>
+        <div class="campo">
+            <label>Día:</label>
             <input type="date" name="day" value="{{ old('day') }}">
-        </label>
-        <br>
-
-        <label for="area_id">Área:</label>
+        </div>
         
+        <label for="area_id">Área:</label>
         <select name="area_id" id="area_id" class="form-control">
                 <option value="">Seleccione un área</option>
                 
@@ -47,11 +46,10 @@
 
                 @endforeach
             </select>
-        <br>
 
         <label for="training_center_id">Centro de Formación:</label>
         
-         <select name="training_center_id" id="training_center_id" class="form-control">
+        <select name="training_center_id" id="training_center_id" class="form-control">
                 <option value="">Seleccione un centro de formación</option>
                 
                 @foreach($training_centers as $training_center)
@@ -65,7 +63,9 @@
 
             <br>
 
-        <button type="submit">Llenar el siguiente formulario</button>
+        <div class="botones_formularios"></div>
+        <button type="submit" class="btn-sena">Guardar</button>
         
     </form>
+</div>
 @endsection

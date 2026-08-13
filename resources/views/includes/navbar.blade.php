@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-sena">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Admin-Sena</a>
+        <a class="navbar-brand" href="{{ route('dashboard') }}"> <img src="{{ asset('images/sena.png') }}" alt="Logo SENA" class="logo-sena" width="85" height="60"></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarText" aria-controls="navbarText"
